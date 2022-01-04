@@ -88,7 +88,7 @@ export const getDashBoardDepositRow = ({ assetName, collateralType }: GetDashBoa
   } else {
     return cy
       .get(
-        `[data-cy=dashboardDespositListItem${assetName}] .Switcher__label:contains('${collateralType}')`
+        `[data-cy=dashboardDespositListItem${assetName}] .Switcher__swiper input[aria-checked="${collateralType}"]`
       )
       .parents(`[data-cy=dashboardDespositListItem${assetName}]`);
   }
